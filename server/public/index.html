@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web Socket</title>
+    <title>Chat App</title>
     <link href="style.css" rel="stylesheet" />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.min.js"
@@ -14,11 +14,41 @@
     <script src="app.js" defer></script>
   </head>
   <body>
-    <form>
-      <input type="text" id="message" placeholder="Send you mesage" />
-      <button type="submit">Send</button>
-    </form>
-    <ul></ul>
-    <p class="activity"></p>
+    <main>
+      <form class="form-join">
+        <input
+          type="text"
+          id="name"
+          maxlength="12"
+          placeholder="Enter your name"
+          size="5"
+          required
+        />
+        <input
+          type="text"
+          id="room"
+          maxlength="8"
+          placeholder="Chat room"
+          size="5"
+          required
+        />
+        <button type="submit" id="join">Join</button>
+      </form>
+      <ul class="chat-display"> </ul>
+        <p class="user-list"></p>
+        <p class="room-list"></p>
+        <p class="activity"></p>
+      <form class="form-msg">
+        <input
+          type="text"
+          id="message"
+          placeholder="Send you mesage"
+          required
+        />
+        <button type="submit">Send</button>
+      </form>
+      <ul></ul>
+      <p class="activity"></p>
+    </main>
   </body>
 </html>
